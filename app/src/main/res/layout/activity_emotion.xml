@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmotionActivity">
+
+    <TextView
+        android:id="@+id/txtPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="300dp"
+        android:text="Place"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Spinner
+        android:id="@+id/spiPlace"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/txtPlace"
+        app:layout_constraintStart_toEndOf="@+id/txtPlace"
+        app:layout_constraintTop_toTopOf="@+id/txtPlace" />
+
+    <Spinner
+        android:id="@+id/spiFatigue"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/txtFatigue"
+        app:layout_constraintEnd_toEndOf="@+id/spiNervous"
+        app:layout_constraintStart_toStartOf="@+id/spiNervous"
+        app:layout_constraintTop_toTopOf="@+id/txtFatigue" />
+
+    <TextView
+        android:id="@+id/txtUpset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="300dp"
+        android:text="Upset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPlace" />
+
+    <Spinner
+        android:id="@+id/spiUpset"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/spiPlace"
+        android:layout_marginStart="55dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtUpset"
+        app:layout_constraintStart_toEndOf="@+id/txtUpset"
+        app:layout_constraintTop_toTopOf="@+id/txtUpset" />
+
+    <Spinner
+        android:id="@+id/spiNervous"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/spiPlace"
+        android:layout_marginStart="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNervous"
+        app:layout_constraintStart_toEndOf="@+id/txtNervous"
+        app:layout_constraintTop_toTopOf="@+id/txtNervous" />
+
+    <Spinner
+        android:id="@+id/spiDetermined"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/spiNervous"
+        app:layout_constraintBottom_toBottomOf="@+id/txtDetermined"
+        app:layout_constraintEnd_toEndOf="@+id/spiNervous"
+        app:layout_constraintStart_toStartOf="@+id/spiNervous"
+        app:layout_constraintTop_toTopOf="@+id/txtDetermined" />
+
+    <Spinner
+        android:id="@+id/spiAttentive"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/spiDetermined"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAttentive"
+        app:layout_constraintEnd_toEndOf="@+id/spiDetermined"
+        app:layout_constraintStart_toStartOf="@+id/spiDetermined"
+        app:layout_constraintTop_toTopOf="@+id/txtAttentive" />
+
+    <Spinner
+        android:id="@+id/spiAfraid"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/spiAttentive"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAfraid"
+        app:layout_constraintEnd_toEndOf="@+id/spiAttentive"
+        app:layout_constraintStart_toStartOf="@+id/spiAttentive"
+        app:layout_constraintTop_toTopOf="@+id/txtAfraid" />
+
+    <Spinner
+        android:id="@+id/spiActive"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/spiAfraid"
+        app:layout_constraintBottom_toBottomOf="@+id/txtActive"
+        app:layout_constraintEnd_toEndOf="@+id/spiAfraid"
+        app:layout_constraintStart_toStartOf="@+id/spiAfraid"
+        app:layout_constraintTop_toTopOf="@+id/txtActive" />
+
+    <Spinner
+        android:id="@+id/spiArousal"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/spiActive"
+        app:layout_constraintBottom_toBottomOf="@+id/txtArousal"
+        app:layout_constraintEnd_toEndOf="@+id/spiActive"
+        app:layout_constraintStart_toStartOf="@+id/spiActive"
+        app:layout_constraintTop_toTopOf="@+id/txtArousal" />
+
+    <TextView
+        android:id="@+id/txtHostile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtUpset"
+        android:layout_marginTop="40dp"
+        android:text="Hostile"
+        app:layout_constraintEnd_toEndOf="@+id/txtUpset"
+        app:layout_constraintStart_toStartOf="@+id/txtUpset"
+        app:layout_constraintTop_toBottomOf="@+id/txtUpset" />
+
+    <Spinner
+        android:id="@+id/spiHostile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/spiUpset"
+        app:layout_constraintBottom_toBottomOf="@+id/txtHostile"
+        app:layout_constraintEnd_toEndOf="@+id/spiUpset"
+        app:layout_constraintStart_toStartOf="@+id/spiUpset"
+        app:layout_constraintTop_toTopOf="@+id/txtHostile" />
+
+
+    <TextView
+        android:id="@+id/txtAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtHostile"
+        android:layout_marginTop="40dp"
+        android:text="Alert"
+        app:layout_constraintEnd_toEndOf="@+id/txtHostile"
+        app:layout_constraintStart_toStartOf="@+id/txtHostile"
+        app:layout_constraintTop_toBottomOf="@+id/txtHostile" />
+
+    <Spinner
+        android:id="@+id/spiAlert"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/spiHostile"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAlert"
+        app:layout_constraintEnd_toEndOf="@+id/spiHostile"
+        app:layout_constraintStart_toStartOf="@+id/spiHostile"
+        app:layout_constraintTop_toTopOf="@+id/txtAlert" />
+
+    <TextView
+        android:id="@+id/txtAshamed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAlert"
+        android:layout_marginTop="40dp"
+        android:text="Ashamed"
+        app:layout_constraintEnd_toEndOf="@+id/txtAlert"
+        app:layout_constraintStart_toStartOf="@+id/txtAlert"
+        app:layout_constraintTop_toBottomOf="@+id/txtAlert" />
+
+    <Spinner
+        android:id="@+id/spiAshamed"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/spiAlert"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAshamed"
+        app:layout_constraintEnd_toEndOf="@+id/spiAlert"
+        app:layout_constraintStart_toStartOf="@+id/spiAlert"
+        app:layout_constraintTop_toTopOf="@+id/txtAshamed" />
+
+    <TextView
+        android:id="@+id/txtInspired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAlert"
+        android:layout_marginTop="40dp"
+        android:text="Inspired"
+        app:layout_constraintEnd_toEndOf="@+id/txtAshamed"
+        app:layout_constraintStart_toStartOf="@+id/txtAshamed"
+        app:layout_constraintTop_toBottomOf="@+id/txtAshamed" />
+
+    <Spinner
+        android:id="@+id/spiInspired"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/spiAshamed"
+        app:layout_constraintBottom_toBottomOf="@+id/txtInspired"
+        app:layout_constraintEnd_toEndOf="@+id/spiAshamed"
+        app:layout_constraintStart_toStartOf="@+id/spiAshamed"
+        app:layout_constraintTop_toTopOf="@+id/txtInspired" />
+
+    <TextView
+        android:id="@+id/txtValence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtInspired"
+        android:layout_marginTop="80dp"
+        android:text="Valence"
+        app:layout_constraintEnd_toEndOf="@+id/txtInspired"
+        app:layout_constraintStart_toStartOf="@+id/txtInspired"
+        app:layout_constraintTop_toBottomOf="@+id/txtInspired" />
+
+    <Spinner
+        android:id="@+id/spiValence"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/spiAshamed"
+        app:layout_constraintBottom_toBottomOf="@+id/txtValence"
+        app:layout_constraintEnd_toEndOf="@+id/spiInspired"
+        app:layout_constraintStart_toStartOf="@+id/spiInspired"
+        app:layout_constraintTop_toTopOf="@+id/txtValence" />
+
+    <TextView
+        android:id="@+id/txtNervous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="80dp"
+        android:text="Nervous"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPlace" />
+
+    <TextView
+        android:id="@+id/txtDetermined"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Determined"
+        app:layout_constraintEnd_toEndOf="@+id/txtNervous"
+        app:layout_constraintStart_toStartOf="@+id/txtNervous"
+        app:layout_constraintTop_toBottomOf="@+id/txtNervous" />
+
+    <TextView
+        android:id="@+id/txtAttentive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Attentive"
+        app:layout_constraintEnd_toEndOf="@+id/txtDetermined"
+        app:layout_constraintStart_toStartOf="@+id/txtDetermined"
+        app:layout_constraintTop_toBottomOf="@+id/txtDetermined" />
+
+    <TextView
+        android:id="@+id/txtAfraid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Afraid"
+        app:layout_constraintEnd_toEndOf="@+id/txtAttentive"
+        app:layout_constraintStart_toStartOf="@+id/txtAttentive"
+        app:layout_constraintTop_toBottomOf="@+id/txtAttentive" />
+
+    <TextView
+        android:id="@+id/txtActive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Active"
+        app:layout_constraintEnd_toEndOf="@+id/txtAfraid"
+        app:layout_constraintStart_toStartOf="@+id/txtAfraid"
+        app:layout_constraintTop_toBottomOf="@+id/txtAfraid" />
+
+    <TextView
+        android:id="@+id/txtArousal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Arousal"
+        app:layout_constraintEnd_toEndOf="@+id/txtActive"
+        app:layout_constraintStart_toStartOf="@+id/txtActive"
+        app:layout_constraintTop_toBottomOf="@+id/txtActive" />
+
+    <TextView
+        android:id="@+id/txtFatigue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="50dp"
+        android:text="Fatigue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/saveEmotionBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtArousal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

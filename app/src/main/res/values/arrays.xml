@@ -1,0 +1,65 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+    </string-array>
+
+    <string-array name="reply_values">
+    </string-array>
+
+    <string-array name="activities">
+        <item>Eating</item>
+        <item>Cooking</item>
+        <item>Bicycle</item>
+        <item>Taking class</item>
+        <item>Working</item>
+        <item>Reading Book</item>
+        <item>Relax listening music</item>
+        <item>Shopping</item>
+        <item>In a meeting</item>
+        <item>Sleeping</item>
+    </string-array>
+
+    <string-array name="startStop">
+        <item>Start</item>
+        <item>End</item>
+    </string-array>
+
+    <string-array name="places">
+        <item>1 Home</item>
+        <item>2 Lab</item>
+        <item>3 Cafe/Restaurant</item>
+        <item>4 Outside</item>
+    </string-array>
+
+    <string-array name="fatigue">
+        <item>1 Very energetic</item>
+        <item>2 Energetic</item>
+        <item>3 Neutral</item>
+        <item>4 Tired</item>
+        <item>5 Very tired</item>
+    </string-array>
+
+    <string-array name="panasValues">
+        <item>1 Very slightly or not at all</item>
+        <item>2 A little</item>
+        <item>3 Moderately</item>
+        <item>4 Quite a bit</item>
+        <item>5 Extremely</item>
+    </string-array>
+
+    <string-array name="arousalValues">
+        <item>1 Very low</item>
+        <item>2 Low</item>
+        <item>3 Neutral</item>
+        <item>4 High</item>
+        <item>5 Very high</item>
+    </string-array>
+
+    <string-array name="valencelValues">
+        <item>1 Very negative</item>
+        <item>2 Negative</item>
+        <item>3 Neutral</item>
+        <item>4 Positive</item>
+        <item>5 Very positive</item>
+    </string-array>
+</resources>
