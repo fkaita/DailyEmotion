@@ -43,6 +43,7 @@ public class EmotionActivity extends AppCompatActivity implements AdapterView.On
         Spinner spiActive = findViewById(R.id.spiActive);
         Spinner spiValence = findViewById(R.id.spiValence);
         Spinner spiArousal = findViewById(R.id.spiArousal);
+        Spinner spiStress = findViewById(R.id.spiStress);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> placeAdapter = ArrayAdapter.createFromResource(this,
                 R.array.places, android.R.layout.simple_spinner_item);
@@ -54,12 +55,15 @@ public class EmotionActivity extends AppCompatActivity implements AdapterView.On
                 R.array.valencelValues, android.R.layout.simple_spinner_item);
         ArrayAdapter<CharSequence> arousalAdapter = ArrayAdapter.createFromResource(this,
                 R.array.arousalValues, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> stressAdapter = ArrayAdapter.createFromResource(this,
+                R.array.stress, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         placeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         fatigueAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         panasAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         valenceAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         arousalAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        stressAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spiPlace.setAdapter(placeAdapter);
         spiFatigue.setAdapter(fatigueAdapter);
@@ -75,13 +79,14 @@ public class EmotionActivity extends AppCompatActivity implements AdapterView.On
         spiActive.setAdapter(panasAdapter);
         spiValence.setAdapter(valenceAdapter);
         spiArousal.setAdapter(arousalAdapter);
+        spiStress.setAdapter(stressAdapter);
 
         // Set on item listener
         spiPlace.setOnItemSelectedListener(null);
         spiPlace.setSelection(0, false);
         spiPlace.setOnItemSelectedListener(this);
         spiFatigue.setOnItemSelectedListener(null);
-        spiFatigue.setSelection(2, false);
+        spiFatigue.setSelection(3, false);
         spiFatigue.setOnItemSelectedListener(this);
         spiUpset.setOnItemSelectedListener(null);
         spiUpset.setSelection(2, false);
@@ -119,6 +124,9 @@ public class EmotionActivity extends AppCompatActivity implements AdapterView.On
         spiArousal.setOnItemSelectedListener(null);
         spiArousal.setSelection(2, false);
         spiArousal.setOnItemSelectedListener(this);
+        spiStress.setOnItemSelectedListener(null);
+        spiStress.setSelection(0, false);
+        spiStress.setOnItemSelectedListener(this);
 
         Button saveEmotionBtn = findViewById(R.id.saveEmotionBtn);
         saveEmotionBtn.setOnClickListener(new View.OnClickListener() {
@@ -142,14 +150,16 @@ public class EmotionActivity extends AppCompatActivity implements AdapterView.On
                     String active = (String) spiActive.getSelectedItem();
                     String valence = (String) spiValence.getSelectedItem();
                     String arousal = (String) spiArousal.getSelectedItem();
+                    String stress = (String) spiStress.getSelectedItem();
 
                     OpenHelper helper = new OpenHelper(getApplicationContext());
                     SQLiteDatabase db = helper.getWritableDatabase();
+//                    helper.onUpgrade(db, 0,1);
                     if(db == null){
                         helper.onUpgrade(db, 0,1);
                     }
 
-                    insertData(db, timeSaved, place, fatigue, upset, hostile, alert, ashamed, inspired, nervous, determined, attentive, afraid, active, valence, arousal);
+                    insertData(db, timeSaved, place, fatigue, upset, hostile, alert, ashamed, inspired, nervous, determined, attentive, afraid, active, valence, arousal, stress);
                     finish();
 
                 }
@@ -232,6 +242,10 @@ public class EmotionActivity extends AppCompatActivity implements AdapterView.On
                 TextView txtArousal = findViewById(R.id.txtArousal);
                 txtArousal.append(": "+ position);
                 break;
+            case R.id.spiStress:
+                TextView txtStress = findViewById(R.id.txtStress);
+                txtStress.append(": "+ position);
+                break;
             default:
                 break;
         }
@@ -251,7 +265,7 @@ public class EmotionActivity extends AppCompatActivity implements AdapterView.On
     }
 
     private void insertData(SQLiteDatabase db, String timeSaved, String place, String fatigue, String upset, String hostile, String alert,
-                            String ashamed, String inspired, String nervous, String determined, String attentive, String afraid, String active, String valence, String arousal) {
+                            String ashamed, String inspired, String nervous, String determined, String attentive, String afraid, String active, String valence, String arousal, String stress) {
         ContentValues values = new ContentValues();
         values.put("timeSaved", timeSaved);
         values.put("place", place);
@@ -268,6 +282,7 @@ public class EmotionActivity extends AppCompatActivity implements AdapterView.On
         values.put("active", active);
         values.put("valence", valence);
         values.put("arousal", arousal);
+        values.put("stress", stress);
 
         db.insert("emotion_db", null, values);
     }

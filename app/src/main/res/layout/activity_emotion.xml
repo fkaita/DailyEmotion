@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".EmotionActivity">
 
+    <Spinner
+        android:id="@+id/spiStress"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/spiPlace"
+        app:layout_constraintBottom_toBottomOf="@+id/txtStress"
+        app:layout_constraintEnd_toEndOf="@+id/spiPlace"
+        app:layout_constraintStart_toStartOf="@+id/spiPlace"
+        app:layout_constraintTop_toTopOf="@+id/txtStress" />
+
     <TextView
         android:id="@+id/txtPlace"
         android:layout_width="wrap_content"
@@ -18,11 +28,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <TextView
+        android:id="@+id/txtStress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="300dp"
+        android:text="Stress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf ="@+id/txtPlace" />
+
     <Spinner
         android:id="@+id/spiPlace"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="55dp"
         android:spinnerMode="dialog"
         app:layout_constraintBottom_toBottomOf="@+id/txtPlace"
         app:layout_constraintStart_toEndOf="@+id/txtPlace"
@@ -42,7 +64,7 @@
         android:id="@+id/txtUpset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="300dp"
         android:text="Upset"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,9 +76,10 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_below="@+id/spiPlace"
-        android:layout_marginStart="55dp"
+
         app:layout_constraintBottom_toBottomOf="@+id/txtUpset"
-        app:layout_constraintStart_toEndOf="@+id/txtUpset"
+        app:layout_constraintEnd_toEndOf="@+id/spiStress"
+        app:layout_constraintStart_toStartOf="@+id/spiStress"
         app:layout_constraintTop_toTopOf="@+id/txtUpset" />
 
     <Spinner
@@ -209,7 +232,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtInspired"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="Valence"
         app:layout_constraintEnd_toEndOf="@+id/txtInspired"
         app:layout_constraintStart_toStartOf="@+id/txtInspired"
@@ -230,7 +253,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         android:text="Nervous"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -280,7 +303,7 @@
         android:id="@+id/txtArousal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="Arousal"
         app:layout_constraintEnd_toEndOf="@+id/txtActive"
         app:layout_constraintStart_toStartOf="@+id/txtActive"

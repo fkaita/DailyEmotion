@@ -54,6 +54,9 @@ public class OpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+//        if (newVersion > oldVersion) {
+//            db.execSQL("ALTER TABLE emotion_db ADD COLUMN stress TEXT");
+//        }
         db.execSQL(
                 SQL_DELETE_ENTRIES_1
         );

@@ -33,11 +33,19 @@
     </string-array>
 
     <string-array name="fatigue">
-        <item>1 Very energetic</item>
-        <item>2 Energetic</item>
-        <item>3 Neutral</item>
-        <item>4 Tired</item>
-        <item>5 Very tired</item>
+        <item>1 fully alert, wide awake</item>
+        <item>2 very lively, responsive, but not at peak</item>
+        <item>3 okay, somewhat fresh</item>
+        <item>4 a little tired, less than fresh</item>
+        <item>5 moderately tired, let down</item>
+        <item>6 extremely tired, very difficult to concentrate</item>
+        <item>7 completely exhausted, unable to function effectively</item>
+    </string-array>
+
+    <string-array name="stress">
+        <item>1 no stress</item>
+        <item>2 little stress</item>
+        <item>3 much stress</item>
     </string-array>
 
     <string-array name="panasValues">

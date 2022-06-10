@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                                 Cursor cursor2 = db.query(
                                         "emotion_db",
                                         new String[] { "timeSaved", "place", "fatigue", "upset", "hostile", "alert", "ashamed", "inspired", "nervous", "determined",
-                                        "attentive", "afraid", "active", "valence", "arousal"},
+                                        "attentive", "afraid", "active", "valence", "arousal", "stress"},
                                         null,
                                         null,
                                         null,
@@ -98,11 +98,11 @@ public class MainActivity extends AppCompatActivity {
                                 cursor2.moveToFirst();
                                 for (int i = 0; i < cursor2.getCount(); i++) {
                                     StringBuilder sbuilder = new StringBuilder();
-                                    for (int j=0; j<14; j++) {
+                                    for (int j=0; j<15; j++) {
                                         sbuilder.append(cursor2.getString(j));
                                         sbuilder.append(", ");
                                     }
-                                    sbuilder.append(cursor2.getString(14));
+                                    sbuilder.append(cursor2.getString(15));
                                     sbuilder.append("\n");
                                     outputStream.write(sbuilder.toString().getBytes());
                                     cursor2.moveToNext();
