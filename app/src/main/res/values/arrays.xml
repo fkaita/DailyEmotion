@@ -17,6 +17,7 @@
         <item>Shopping</item>
         <item>In a meeting</item>
         <item>Sleeping</item>
+        <item>Bath/Shower</item>
     </string-array>
 
     <string-array name="startStop">
